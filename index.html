@@ -1,161 +1,1292 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <meta name="theme-color" content="#ff7fa8" />
-  <title>Happy Birthday My Love — 21 August</title>
-  <meta name="description" content="A little birthday surprise made with love 💗" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Itim&family=Kanit:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Happy Birthday 21 August 💖</title>
+
+  <meta name="theme-color" content="#ff8fb8">
+  <meta name="description" content="Happy Birthday My Love - 21 August">
+
   <style>
-    :root{--pink:#ff6f9c;--pink2:#ff9fba;--rose:#ff477e;--cream:#fff7f3;--ink:#6f3048;--glass:rgba(255,255,255,.38)}
-    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:'Kanit',sans-serif;color:white;background:#f38da8;overflow-x:hidden}
-    body::before{content:"";position:fixed;inset:0;background:linear-gradient(180deg,rgba(255,141,173,.1),rgba(118,31,68,.28));pointer-events:none;z-index:1}
-    #heartCanvas{position:fixed;inset:0;width:100%;height:100%;z-index:2;pointer-events:none}
-    .page{position:relative;z-index:3;min-height:100vh;background:
-      linear-gradient(180deg,rgba(255,110,151,.12),rgba(238,95,144,.18)),
-      url('assets/images/hero-bg.png') center/cover fixed no-repeat}
-    nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);width:min(1100px,92%);display:flex;align-items:center;justify-content:space-between;padding:10px 16px;border:1px solid rgba(255,255,255,.6);background:rgba(255,255,255,.20);backdrop-filter:blur(14px);border-radius:999px;z-index:50;box-shadow:0 10px 35px rgba(111,48,72,.16)}
-    .brand{font-family:'Pacifico',cursive;font-size:1.15rem;text-shadow:0 2px 10px rgba(129,30,65,.3)} .navlinks{display:flex;gap:10px}.navlinks a{color:white;text-decoration:none;padding:8px 12px;border-radius:999px;font-size:.9rem}.navlinks a:hover{background:rgba(255,255,255,.24)}
-    .hero{min-height:100vh;display:grid;place-items:center;padding:110px 6vw 60px;position:relative;perspective:1200px}
-    .hero-inner{width:min(1200px,100%);display:grid;grid-template-columns:1.02fr .98fr;gap:42px;align-items:center}
-    .copy{filter:drop-shadow(0 12px 30px rgba(98,30,58,.28));animation:floatY 5s ease-in-out infinite}
-    .eyebrow{display:inline-flex;gap:8px;align-items:center;background:rgba(255,255,255,.28);border:1px solid rgba(255,255,255,.6);padding:8px 14px;border-radius:999px;backdrop-filter:blur(10px);margin-bottom:16px}
-    h1{margin:0;line-height:.92;font-family:'Pacifico',cursive;font-size:clamp(3.7rem,9vw,8.2rem);color:#fff3ed;text-shadow:0 7px 0 #ef7595,0 16px 28px rgba(114,28,60,.28)}
-    h1 span{display:block;color:#ff8fae;font-size:.46em;text-shadow:0 4px 0 rgba(255,255,255,.85),0 10px 22px rgba(119,32,65,.18);margin-top:16px}
-    .thai{margin:28px 0 18px;max-width:650px;background:rgba(255,250,249,.76);color:#70344c;border:1px solid rgba(255,255,255,.8);border-radius:28px;padding:20px 24px;box-shadow:0 18px 45px rgba(117,36,67,.15);backdrop-filter:blur(12px);font-family:'Itim',cursive;font-size:clamp(1.2rem,2.1vw,1.75rem)}
-    .actions{display:flex;gap:12px;flex-wrap:wrap}.btn{border:0;cursor:pointer;font:600 1rem 'Kanit',sans-serif;padding:14px 20px;border-radius:999px;box-shadow:inset 0 1px 0 rgba(255,255,255,.8),0 13px 30px rgba(119,24,65,.24);transition:.25s transform,.25s box-shadow}.btn-primary{background:linear-gradient(180deg,#ff9fbb,#ff5f91);color:#fff}.btn-soft{background:rgba(255,255,255,.72);color:#8a3d58}.btn:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 18px 35px rgba(119,24,65,.28)}
-    .gallery3d{height:min(650px,75vh);position:relative;transform-style:preserve-3d}.polaroid{position:absolute;width:min(340px,46vw);background:#fff8f5;padding:14px 14px 58px;border-radius:26px;box-shadow:0 28px 60px rgba(101,37,60,.28);transition:.45s cubic-bezier(.2,.8,.2,1);transform-style:preserve-3d}.polaroid img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:18px;display:block}.p1{left:4%;top:10%;transform:rotateY(10deg) rotateZ(-7deg) translateZ(30px)}.p2{right:0;bottom:8%;transform:rotateY(-11deg) rotateZ(6deg) translateZ(70px)}.polaroid:hover{transform:translateZ(120px) rotateZ(0deg) scale(1.04);z-index:5}.caption{position:absolute;left:0;right:0;bottom:14px;text-align:center;color:#a14564;font-family:'Pacifico',cursive;font-size:1.05rem}.heart-sticker{position:absolute;font-size:48px;filter:drop-shadow(0 8px 8px rgba(156,40,84,.22));animation:pulse 1.8s infinite}.hs1{right:-20px;top:44%}.hs2{left:-22px;bottom:25%}
-    section{padding:90px 7vw;position:relative}.glass{max-width:1000px;margin:auto;background:rgba(255,255,255,.48);border:1px solid rgba(255,255,255,.72);border-radius:34px;padding:34px;box-shadow:0 30px 80px rgba(114,28,60,.18);backdrop-filter:blur(18px);color:#753b50}.section-title{text-align:center;font-family:'Pacifico',cursive;font-size:clamp(2.3rem,5vw,4.2rem);color:#fff;text-shadow:0 5px 0 #e76f93,0 12px 25px rgba(115,28,62,.22);margin:0 0 30px}.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:rgba(255,255,255,.78);padding:22px;border-radius:24px;text-align:center;box-shadow:0 16px 40px rgba(121,40,72,.12)}.card .icon{font-size:2rem}.card h3{margin:8px 0;color:#a53c62}.card p{margin:0;line-height:1.7}.letter{font-family:'Itim',cursive;font-size:clamp(1.25rem,2vw,1.6rem);line-height:1.9;text-align:center}.cake{font-size:78px;text-align:center;filter:drop-shadow(0 18px 20px rgba(118,32,65,.2));animation:floatY 3s ease-in-out infinite}.footer{text-align:center;padding:50px 20px 80px;color:#fff8fb;text-shadow:0 2px 10px rgba(102,29,58,.28)}
-    .music{position:fixed;right:18px;bottom:18px;z-index:60;width:54px;height:54px;border-radius:50%;border:1px solid rgba(255,255,255,.75);background:linear-gradient(180deg,#ff9eba,#ff5f91);color:white;font-size:22px;box-shadow:0 14px 35px rgba(111,32,62,.28);cursor:pointer}.music.playing{animation:pulse 1.2s infinite}
-    .modal{position:fixed;inset:0;z-index:100;display:grid;place-items:center;background:rgba(88,27,48,.35);backdrop-filter:blur(10px);opacity:0;pointer-events:none;transition:.3s}.modal.show{opacity:1;pointer-events:auto}.gift{width:min(420px,88vw);background:linear-gradient(180deg,#fff9f7,#ffe0e9);color:#7b3b54;padding:30px;border-radius:34px;text-align:center;box-shadow:0 30px 90px rgba(89,21,47,.28);transform:scale(.86) rotateX(8deg);transition:.35s}.modal.show .gift{transform:scale(1) rotateX(0)}.giftbox{font-size:100px;animation:pulse 1.4s infinite}.close{margin-top:15px}
-    #ytWrap{position:fixed;width:1px;height:1px;overflow:hidden;opacity:.01;pointer-events:none;left:-10px;bottom:-10px}
-    @keyframes floatY{50%{transform:translateY(-10px)}}@keyframes pulse{50%{transform:scale(1.12)}}
-    @media(max-width:850px){nav{padding:9px 12px}.navlinks{display:none}.hero{padding-top:100px}.hero-inner{grid-template-columns:1fr;gap:12px}.copy{text-align:center}.thai{margin-left:auto;margin-right:auto}.actions{justify-content:center}.gallery3d{height:520px}.p1{left:6%;top:8%}.p2{right:5%;bottom:4%}.timeline{grid-template-columns:1fr}.page{background-attachment:scroll}h1{font-size:clamp(3.2rem,16vw,6rem)}}
+    @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Pacifico&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Kanit', sans-serif;
+      color: white;
+      overflow-x: hidden;
+      min-height: 100vh;
+      background:
+        linear-gradient(
+          rgba(255, 120, 165, 0.18),
+          rgba(93, 31, 77, 0.45)
+        ),
+        url('hero-bg.png') center center / cover fixed;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,.18), transparent 22%),
+        radial-gradient(circle at 80% 30%, rgba(255,189,213,.25), transparent 26%);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    /* -----------------------------
+       INTRO
+    ------------------------------ */
+
+    #intro {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background:
+        linear-gradient(
+          135deg,
+          #ff9bbb,
+          #ffb8cc,
+          #f98dad
+        );
+
+      transition:
+        opacity .9s ease,
+        visibility .9s ease;
+    }
+
+    #intro.hide {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .gift-intro {
+      text-align: center;
+      padding: 30px;
+    }
+
+    .gift-box {
+      font-size: 95px;
+      display: inline-block;
+      animation: giftBounce 1.8s infinite ease-in-out;
+      filter: drop-shadow(0 20px 20px rgba(145, 28, 77, .25));
+    }
+
+    @keyframes giftBounce {
+      0%, 100% {
+        transform: translateY(0) rotate(-4deg);
+      }
+      50% {
+        transform: translateY(-15px) rotate(4deg);
+      }
+    }
+
+    .gift-intro h2 {
+      font-size: clamp(30px, 7vw, 60px);
+      margin-top: 20px;
+      font-family: 'Pacifico', cursive;
+      text-shadow: 0 4px 14px rgba(139, 23, 69, .35);
+    }
+
+    .gift-intro p {
+      margin-top: 10px;
+      font-size: 18px;
+      opacity: .95;
+    }
+
+    .open-btn {
+      margin-top: 28px;
+      padding: 15px 32px;
+
+      border: none;
+      border-radius: 999px;
+
+      font-family: inherit;
+      font-size: 18px;
+      font-weight: 600;
+
+      color: #cf3c71;
+      background: white;
+
+      box-shadow:
+        0 12px 35px rgba(151, 35, 80, .22),
+        inset 0 -4px 0 rgba(255, 148, 185, .18);
+
+      cursor: pointer;
+
+      transition: .25s;
+    }
+
+    .open-btn:hover {
+      transform: translateY(-4px) scale(1.04);
+    }
+
+    /* -----------------------------
+       FLOATING HEARTS
+    ------------------------------ */
+
+    .heart-container {
+      position: fixed;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .heart {
+      position: absolute;
+      bottom: -50px;
+      opacity: 0;
+
+      animation:
+        floatHeart linear forwards;
+
+      filter: drop-shadow(0 4px 8px rgba(186, 25, 89, .25));
+    }
+
+    @keyframes floatHeart {
+      0% {
+        transform:
+          translateY(0)
+          translateX(0)
+          scale(.6)
+          rotate(0deg);
+
+        opacity: 0;
+      }
+
+      10% {
+        opacity: .8;
+      }
+
+      80% {
+        opacity: .7;
+      }
+
+      100% {
+        transform:
+          translateY(-115vh)
+          translateX(40px)
+          scale(1.3)
+          rotate(25deg);
+
+        opacity: 0;
+      }
+    }
+
+    /* -----------------------------
+       HERO
+    ------------------------------ */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 70px 22px;
+
+      position: relative;
+      z-index: 5;
+    }
+
+    .hero-wrap {
+      width: min(1200px, 100%);
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .hero-text {
+      text-shadow: 0 3px 14px rgba(80, 16, 50, .35);
+    }
+
+    .small-title {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      padding: 9px 17px;
+      margin-bottom: 22px;
+
+      border-radius: 100px;
+
+      background: rgba(255,255,255,.2);
+      border: 1px solid rgba(255,255,255,.45);
+
+      backdrop-filter: blur(12px);
+    }
+
+    .hero-text h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: clamp(55px, 8vw, 100px);
+      line-height: .96;
+
+      color: #fff;
+
+      text-shadow:
+        0 5px 0 rgba(237, 91, 141, .6),
+        0 15px 35px rgba(128, 29, 77, .3);
+    }
+
+    .date {
+      margin-top: 18px;
+      font-size: clamp(34px, 5vw, 59px);
+      font-weight: 700;
+
+      color: #ffe8f0;
+
+      text-shadow:
+        0 3px 0 #e45f91,
+        0 10px 30px rgba(98, 20, 59, .3);
+    }
+
+    .message-box {
+      margin-top: 28px;
+
+      padding: 20px 22px;
+
+      max-width: 570px;
+
+      border-radius: 24px;
+
+      background: rgba(255,255,255,.2);
+      border: 1px solid rgba(255,255,255,.38);
+
+      backdrop-filter: blur(14px);
+
+      box-shadow:
+        0 15px 40px rgba(92, 22, 57, .18);
+
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .message-box strong {
+      font-size: 22px;
+      color: #fff5f8;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+
+      margin-top: 24px;
+    }
+
+    .love-btn,
+    .music-btn {
+      border: none;
+      cursor: pointer;
+
+      padding: 14px 23px;
+
+      border-radius: 999px;
+
+      font-family: inherit;
+      font-size: 17px;
+      font-weight: 600;
+
+      transition: .25s;
+    }
+
+    .love-btn {
+      color: #d03c75;
+      background: white;
+
+      box-shadow:
+        0 12px 30px rgba(126, 25, 67, .22);
+    }
+
+    .music-btn {
+      color: white;
+      background: rgba(255,255,255,.16);
+
+      border: 1px solid rgba(255,255,255,.45);
+
+      backdrop-filter: blur(10px);
+    }
+
+    .love-btn:hover,
+    .music-btn:hover {
+      transform: translateY(-3px) scale(1.03);
+    }
+
+    /* -----------------------------
+       PHOTO 3D
+    ------------------------------ */
+
+    .photo-area {
+      position: relative;
+      min-height: 580px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      perspective: 1400px;
+    }
+
+    .photo-card {
+      position: absolute;
+
+      width: min(340px, 70vw);
+
+      padding: 13px 13px 45px;
+
+      border-radius: 22px;
+
+      background: #fff;
+
+      box-shadow:
+        0 30px 80px rgba(91, 22, 55, .35);
+
+      transition:
+        transform .4s ease,
+        z-index .2s;
+
+      transform-style: preserve-3d;
+    }
+
+    .photo-card img {
+      width: 100%;
+      display: block;
+
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+
+      border-radius: 14px;
+    }
+
+    .photo-card.one {
+      transform:
+        translateX(-100px)
+        rotate(-8deg)
+        rotateY(8deg);
+    }
+
+    .photo-card.two {
+      transform:
+        translateX(100px)
+        translateY(30px)
+        rotate(8deg)
+        rotateY(-8deg);
+    }
+
+    .photo-card:hover {
+      z-index: 10;
+
+      transform:
+        translateX(0)
+        scale(1.07)
+        rotate(0deg)
+        translateZ(50px);
+    }
+
+    .card-heart {
+      position: absolute;
+      bottom: -25px;
+      right: -20px;
+
+      font-size: 58px;
+
+      filter:
+        drop-shadow(0 10px 12px rgba(193, 36, 96, .27));
+
+      animation: heartBeat 1.5s infinite;
+    }
+
+    @keyframes heartBeat {
+      0%, 100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.18);
+      }
+    }
+
+    /* -----------------------------
+       MEMORIES SECTION
+    ------------------------------ */
+
+    .section {
+      position: relative;
+      z-index: 5;
+
+      padding: 100px 22px;
+    }
+
+    .glass-section {
+      width: min(1050px, 100%);
+      margin: auto;
+
+      padding: 45px;
+
+      border-radius: 34px;
+
+      background: rgba(255,255,255,.15);
+      border: 1px solid rgba(255,255,255,.35);
+
+      backdrop-filter: blur(18px);
+
+      box-shadow:
+        0 30px 80px rgba(86, 17, 50, .2);
+
+      text-align: center;
+    }
+
+    .section-title {
+      font-family: 'Pacifico', cursive;
+
+      font-size: clamp(40px, 6vw, 67px);
+
+      margin-bottom: 18px;
+
+      text-shadow:
+        0 4px 0 rgba(213, 65, 117, .5);
+    }
+
+    .memory-text {
+      font-size: 19px;
+      line-height: 1.9;
+
+      max-width: 760px;
+      margin: auto;
+
+      color: #fff9fb;
+    }
+
+    .quote {
+      margin-top: 30px;
+
+      padding: 26px;
+
+      border-radius: 25px;
+
+      background: rgba(255,255,255,.14);
+
+      font-size: 22px;
+      line-height: 1.8;
+    }
+
+    /* -----------------------------
+       SURPRISE
+    ------------------------------ */
+
+    .surprise {
+      margin-top: 40px;
+
+      display: none;
+
+      animation: surpriseShow .8s ease;
+    }
+
+    .surprise.show {
+      display: block;
+    }
+
+    @keyframes surpriseShow {
+      from {
+        opacity: 0;
+        transform: translateY(30px) scale(.95);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    .big-heart {
+      font-size: 90px;
+
+      animation:
+        heartBeat 1.3s infinite;
+    }
+
+    /* -----------------------------
+       MUSIC PLAYER
+    ------------------------------ */
+
+    #youtubePlayer {
+      position: fixed;
+
+      width: 1px;
+      height: 1px;
+
+      left: -9999px;
+      bottom: 0;
+
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* -----------------------------
+       FOOTER
+    ------------------------------ */
+
+    footer {
+      position: relative;
+      z-index: 5;
+
+      padding: 40px 20px 55px;
+
+      text-align: center;
+
+      font-size: 15px;
+
+      color: rgba(255,255,255,.86);
+    }
+
+    /* -----------------------------
+       MOBILE
+    ------------------------------ */
+
+    @media (max-width: 850px) {
+
+      body {
+        background-attachment: scroll;
+      }
+
+      .hero {
+        padding-top: 65px;
+        padding-bottom: 20px;
+      }
+
+      .hero-wrap {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 20px;
+      }
+
+      .message-box {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .photo-area {
+        min-height: 500px;
+      }
+
+      .photo-card {
+        width: 260px;
+      }
+
+      .photo-card.one {
+        transform:
+          translateX(-50px)
+          rotate(-7deg);
+      }
+
+      .photo-card.two {
+        transform:
+          translateX(50px)
+          translateY(40px)
+          rotate(7deg);
+      }
+
+      .glass-section {
+        padding: 30px 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      .photo-area {
+        min-height: 440px;
+      }
+
+      .photo-card {
+        width: 220px;
+      }
+
+      .photo-card.one {
+        transform:
+          translateX(-38px)
+          rotate(-7deg);
+      }
+
+      .photo-card.two {
+        transform:
+          translateX(38px)
+          translateY(38px)
+          rotate(7deg);
+      }
+
+      .date {
+        font-size: 36px;
+      }
+
+      .message-box {
+        font-size: 16px;
+      }
+    }
+
   </style>
 </head>
+
+
 <body>
-<canvas id="heartCanvas"></canvas>
-<div class="page">
-  <nav><div class="brand">For You 💗</div><div class="navlinks"><a href="#home">Home</a><a href="#memories">Our Memories</a><a href="#message">Messages</a></div><div>Made with 💖</div></nav>
 
-  <main id="home" class="hero">
-    <div class="hero-inner">
-      <div class="copy">
-        <div class="eyebrow">🌊 Pink Heart Beach • Birthday Surprise</div>
-        <h1>Happy Birthday <span>21 August ✨</span></h1>
-        <div class="thai">สุขสันต์วันเกิดนะคนเก่งของเค้า 💗<br>ขอบคุณที่เข้ามาเป็นรอยยิ้มของเค้า<br>รักเธอมากขึ้นทุกวันเลยนะ</div>
-        <div class="actions">
-          <button class="btn btn-primary" id="openHeart">💖 Open My Heart</button>
-          <a class="btn btn-soft" href="#memories" style="text-decoration:none">📸 ดูความทรงจำของเรา</a>
-        </div>
-      </div>
-      <div class="gallery3d" id="gallery">
-        <div class="polaroid p1"><img src="assets/images/photo1.jpg" alt="Our memory 1"><div class="caption">My favorite smile 💕</div><div class="heart-sticker hs1">💗</div></div>
-        <div class="polaroid p2"><img src="assets/images/photo2.jpg" alt="Our memory 2"><div class="caption">Us, always ✨</div><div class="heart-sticker hs2">💖</div></div>
-      </div>
+  <!-- INTRO -->
+  <div id="intro">
+
+    <div class="gift-intro">
+
+      <div class="gift-box">🎁</div>
+
+      <h2>For My Special Girl</h2>
+
+      <p>
+        มีของขวัญเล็ก ๆ ให้คนพิเศษ 💖
+      </p>
+
+      <button class="open-btn" onclick="openGift()">
+        เปิดของขวัญ 💕
+      </button>
+
     </div>
-  </main>
 
-  <section id="memories">
-    <h2 class="section-title">Our Little Love Story</h2>
-    <div class="glass timeline">
-      <div class="card"><div class="icon">🌅</div><h3>ทุกช่วงเวลาที่มีเธอ</h3><p>ธรรมดาแค่ไหนก็กลายเป็นวันพิเศษ เพราะมีเธออยู่ข้าง ๆ</p></div>
-      <div class="card"><div class="icon">📸</div><h3>ทุกภาพของเรา</h3><p>คือความทรงจำที่อยากเก็บไว้ดูแล้วก็ยิ้มไปอีกนาน ๆ</p></div>
-      <div class="card"><div class="icon">💞</div><h3>จากวันนี้ไป</h3><p>ขอให้มีเรื่องให้เราหัวเราะด้วยกันอีกเยอะ ๆ และรักกันแบบนี้ไปนาน ๆ</p></div>
-    </div>
-  </section>
-
-  <section id="message">
-    <h2 class="section-title">A Message For You</h2>
-    <div class="glass letter">
-      <div class="cake">🎂</div>
-      วันนี้เป็นวันเกิดของคนที่พิเศษมาก ๆ สำหรับเค้า<br>
-      ขอให้เธอมีความสุขมาก ๆ ได้ทำในสิ่งที่ชอบ ได้เจอแต่เรื่องดี ๆ<br>
-      และไม่ว่าจะเป็นวันธรรมดาหรือวันที่เหนื่อย อยากให้รู้ไว้ว่ายังมีเค้าคอยอยู่ข้าง ๆ เสมอ 💗<br><br>
-      ขอบคุณที่เข้ามาเป็นความสุข เป็นรอยยิ้ม และเป็นอีกหนึ่งเหตุผลที่ทำให้หลาย ๆ วันของเค้าน่ารักขึ้น<br>
-      <strong>Happy Birthday นะ รักเธอมากขึ้นทุกวันเลย ✨</strong>
-    </div>
-  </section>
-
-  <div class="footer">21 August • Made especially for you 💗🌊✨</div>
-</div>
-
-<button class="music" id="musicBtn" aria-label="เปิดปิดเพลง">🎵</button>
-<div id="ytWrap"><div id="player"></div></div>
-
-<div class="modal" id="modal">
-  <div class="gift">
-    <div class="giftbox">🎁</div>
-    <h2>มีของขวัญเล็ก ๆ ให้เธอ 💖</h2>
-    <p>ของขวัญชิ้นนี้อาจไม่ใหญ่ แต่ทุกคำ ทุกภาพ และทุกหัวใจในหน้านี้ ตั้งใจทำให้เธอคนเดียวเลยนะ</p>
-    <p style="font-family:'Pacifico',cursive;font-size:1.5rem;color:#e45180">Love you more every day 💕</p>
-    <button class="btn btn-primary close" id="closeModal">กอดหนึ่งที 🤍</button>
   </div>
-</div>
 
-<script>
-  // Floating hearts canvas
-  const c=document.getElementById('heartCanvas'),x=c.getContext('2d');let W,H,DPR,hearts=[];
-  function resize(){DPR=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;c.width=W*DPR;c.height=H*DPR;c.style.width=W+'px';c.style.height=H+'px';x.setTransform(DPR,0,0,DPR,0,0);hearts=Array.from({length:Math.min(45,Math.floor(W/24))},()=>({x:Math.random()*W,y:Math.random()*H+H,s:8+Math.random()*18,v:.25+Math.random()*.8,a:.18+Math.random()*.45,w:Math.random()*6.28}))}
-  function drawHeart(cx,cy,s,a){x.save();x.globalAlpha=a;x.translate(cx,cy);x.rotate(-.08);x.fillStyle='#ff77a4';x.beginPath();x.moveTo(0,s*.35);x.bezierCurveTo(-s,-s*.25,-s*.65,-s,0,-s*.45);x.bezierCurveTo(s*.65,-s,s,-s*.25,0,s*.35);x.fill();x.restore()}
-  function loop(){x.clearRect(0,0,W,H);for(const h of hearts){h.y-=h.v;h.x+=Math.sin(h.w+=.01)*.18;if(h.y<-40){h.y=H+40;h.x=Math.random()*W}drawHeart(h.x,h.y,h.s,h.a)}requestAnimationFrame(loop)} addEventListener('resize',resize);resize();loop();
 
-  // subtle mouse 3D parallax
-  const g=document.getElementById('gallery');document.addEventListener('pointermove',e=>{if(innerWidth<850)return;const rx=(e.clientY/innerHeight-.5)*8, ry=(e.clientX/innerWidth-.5)*-10;g.style.transform=`rotateX(${rx}deg) rotateY(${ry}deg)`});
+  <!-- HEART EFFECT -->
+  <div
+    class="heart-container"
+    id="heartContainer">
+  </div>
 
-  // gift modal
-  const modal=document.getElementById('modal');document.getElementById('openHeart').onclick=()=>{modal.classList.add('show');startMusic()};document.getElementById('closeModal').onclick=()=>modal.classList.remove('show');modal.onclick=e=>{if(e.target===modal)modal.classList.remove('show')};
 
-  // YouTube background music — LAZY LOAD
-  // Important: no connection to YouTube is made until the visitor taps a music/open-heart button.
-  // This avoids repeated network permission popups in sandboxed preview environments.
-  let player=null,ready=false,playing=false,ytLoading=false,pendingPlay=false;
-  const musicBtn=document.getElementById('musicBtn');
+  <!-- HERO -->
+  <section class="hero">
 
-  function loadYouTubeAndPlay(){
-    pendingPlay=true;
-    if(ready && player){ startMusic(); return; }
-    if(ytLoading) return;
-    ytLoading=true;
-    musicBtn.textContent='…';
-    const tag=document.createElement('script');
-    tag.src='https://www.youtube.com/iframe_api';
-    tag.async=true;
-    tag.onerror=()=>{ ytLoading=false; musicBtn.textContent='🎵'; };
-    document.head.appendChild(tag);
-  }
+    <div class="hero-wrap">
 
-  window.onYouTubeIframeAPIReady=()=>{
-    player=new YT.Player('player',{
-      height:'1',width:'1',videoId:'nLDuy0nT9j8',
-      playerVars:{autoplay:0,controls:0,loop:1,playlist:'nLDuy0nT9j8',playsinline:1,rel:0},
-      events:{
-        onReady:()=>{
-          ready=true; musicBtn.textContent='🎵';
-          if(pendingPlay) startMusic();
-        },
-        onStateChange:e=>{
-          playing=e.data===YT.PlayerState.PLAYING;
-          musicBtn.classList.toggle('playing',playing);
-          musicBtn.textContent=playing?'⏸️':'🎵';
-        }
+      <div class="hero-text">
+
+        <div class="small-title">
+          💖 For You, My Love
+        </div>
+
+        <h1>
+          Happy<br>
+          Birthday
+        </h1>
+
+        <div class="date">
+          21 August ✨
+        </div>
+
+        <div class="message-box">
+
+          <strong>
+            สุขสันต์วันเกิดนะคนเก่งของเค้า 💖
+          </strong>
+
+          <br><br>
+
+          ขอบคุณที่เข้ามาเป็นรอยยิ้มของเค้า
+          ขอบคุณสำหรับทุกช่วงเวลาดี ๆ
+          ที่เราได้อยู่ด้วยกัน
+
+          <br><br>
+
+          ขอให้ปีนี้เป็นปีที่เต็มไปด้วยความสุข
+          รอยยิ้ม และเรื่องดี ๆ
+
+          <br><br>
+
+          และอยากให้รู้เอาไว้นะว่า...
+
+          <br>
+
+          <b>
+            เค้ารักเธอมากขึ้นทุกวันเลย 🤍
+          </b>
+
+        </div>
+
+
+        <div class="hero-buttons">
+
+          <button
+            class="love-btn"
+            onclick="showLove()">
+
+            💗 Open My Heart
+
+          </button>
+
+          <button
+            class="music-btn"
+            id="musicBtn"
+            onclick="toggleMusic()">
+
+            🎵 เปิดเพลง
+
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- PHOTOS -->
+      <div class="photo-area">
+
+        <div class="photo-card one">
+
+          <img
+            src="photo1.jpg"
+            alt="Our Memory 1">
+
+          <div class="card-heart">
+            💗
+          </div>
+
+        </div>
+
+
+        <div class="photo-card two">
+
+          <img
+            src="photo2.jpg"
+            alt="Our Memory 2">
+
+          <div class="card-heart">
+            💖
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- MESSAGE -->
+  <section class="section">
+
+    <div class="glass-section">
+
+      <h2 class="section-title">
+        Our Memories 💕
+      </h2>
+
+      <div class="memory-text">
+
+        ไม่ว่าจะผ่านไปอีกกี่วัน
+        เค้าก็ยังอยากเก็บทุกช่วงเวลาของเราเอาไว้
+
+        <br><br>
+
+        ทั้งวันที่เราหัวเราะด้วยกัน
+        วันที่ได้ไปเที่ยวด้วยกัน
+        หรือแม้แต่วันธรรมดา ๆ
+        ที่มีเธออยู่ข้าง ๆ
+
+        <br><br>
+
+        เพราะสำหรับเค้า
+        สิ่งที่ทำให้ช่วงเวลาเหล่านั้นพิเศษ
+        ไม่ใช่สถานที่...
+
+        <br>
+
+        <b>
+          แต่มันคือการที่มีเธออยู่ด้วย 💖
+        </b>
+
+      </div>
+
+
+      <div class="quote">
+
+        “21 สิงหาคม
+        ไม่ใช่แค่วันเกิดของเธอ
+
+        <br>
+
+        แต่มันคือวันที่โลก
+        ได้มีคนที่เค้ารักที่สุด
+        เพิ่มขึ้นมาอีกหนึ่งคน”
+
+        💗
+
+      </div>
+
+
+      <div
+        class="surprise"
+        id="surprise">
+
+        <div class="big-heart">
+          💖
+        </div>
+
+        <h2 style="font-size:34px; margin-top:10px;">
+          รักเธอนะ
+        </h2>
+
+        <p style="
+          margin-top:12px;
+          font-size:19px;
+          line-height:1.8;
+        ">
+
+          ขอให้เราได้สร้างความทรงจำดี ๆ
+          ด้วยกันอีกเยอะ ๆ
+
+          <br>
+
+          Happy Birthday My Love 🎂✨
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- YOUTUBE MUSIC -->
+  <div id="youtubePlayer"></div>
+
+
+
+  <footer>
+
+    Made with 💗 for you
+
+    <br>
+
+    21 August
+
+  </footer>
+
+
+
+  <script>
+
+    /* ----------------------------------
+       YOUTUBE
+    ----------------------------------- */
+
+    const VIDEO_ID = "nLDuy0nT9j8";
+
+    let player = null;
+    let youtubeLoaded = false;
+    let musicPlaying = false;
+
+
+    function loadYouTube() {
+
+      if (youtubeLoaded) {
+        return;
       }
-    });
-  };
 
-  function startMusic(){
-    if(!ready || !player){ loadYouTubeAndPlay(); return; }
-    pendingPlay=false;
-    try{ player.setVolume(45); player.playVideo(); }catch(e){}
-  }
+      youtubeLoaded = true;
 
-  musicBtn.onclick=()=>{
-    if(!ready){ loadYouTubeAndPlay(); return; }
-    if(playing) player.pauseVideo(); else startMusic();
-  };
-</script>
+      const tag =
+        document.createElement("script");
+
+      tag.src =
+        "https://www.youtube.com/iframe_api";
+
+      document.body.appendChild(tag);
+
+    }
+
+
+    window.onYouTubeIframeAPIReady =
+      function () {
+
+        player = new YT.Player(
+          "youtubePlayer",
+          {
+
+            width: "1",
+            height: "1",
+
+            videoId: VIDEO_ID,
+
+            playerVars: {
+
+              autoplay: 1,
+              controls: 0,
+
+              loop: 1,
+
+              playlist: VIDEO_ID,
+
+              rel: 0,
+
+              playsinline: 1
+
+            },
+
+            events: {
+
+              onReady: function (event) {
+
+                event.target.setVolume(60);
+
+                event.target.playVideo();
+
+                musicPlaying = true;
+
+                updateMusicButton();
+
+              }
+
+            }
+
+          }
+        );
+
+      };
+
+
+    function toggleMusic() {
+
+      if (!youtubeLoaded) {
+
+        loadYouTube();
+
+        document.getElementById(
+          "musicBtn"
+        ).innerHTML =
+          "⏳ กำลังเปิดเพลง...";
+
+        return;
+
+      }
+
+
+      if (!player) {
+        return;
+      }
+
+
+      if (musicPlaying) {
+
+        player.pauseVideo();
+
+        musicPlaying = false;
+
+      } else {
+
+        player.playVideo();
+
+        musicPlaying = true;
+
+      }
+
+      updateMusicButton();
+
+    }
+
+
+    function updateMusicButton() {
+
+      const btn =
+        document.getElementById(
+          "musicBtn"
+        );
+
+      btn.innerHTML =
+        musicPlaying
+        ? "⏸️ หยุดเพลง"
+        : "🎵 เปิดเพลง";
+
+    }
+
+
+
+    /* ----------------------------------
+       OPEN GIFT
+    ----------------------------------- */
+
+    function openGift() {
+
+      const intro =
+        document.getElementById(
+          "intro"
+        );
+
+      intro.classList.add(
+        "hide"
+      );
+
+
+      burstHearts(
+        25
+      );
+
+
+      /*
+        โหลดเพลงหลังผู้ใช้กดปุ่มเท่านั้น
+        เพื่อหลีกเลี่ยง autoplay block
+      */
+
+      setTimeout(
+        function () {
+
+          loadYouTube();
+
+        },
+        600
+      );
+
+    }
+
+
+
+    /* ----------------------------------
+       SURPRISE
+    ----------------------------------- */
+
+    function showLove() {
+
+      const surprise =
+        document.getElementById(
+          "surprise"
+        );
+
+      surprise.classList.add(
+        "show"
+      );
+
+
+      burstHearts(
+        35
+      );
+
+
+      surprise.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+      });
+
+    }
+
+
+
+    /* ----------------------------------
+       FLOATING HEARTS
+    ----------------------------------- */
+
+    const heartContainer =
+      document.getElementById(
+        "heartContainer"
+      );
+
+
+    const hearts = [
+      "💗",
+      "💖",
+      "💕",
+      "💓",
+      "💞",
+      "🤍"
+    ];
+
+
+    function createHeart() {
+
+      const heart =
+        document.createElement(
+          "div"
+        );
+
+
+      heart.className =
+        "heart";
+
+
+      heart.innerHTML =
+        hearts[
+          Math.floor(
+            Math.random()
+            * hearts.length
+          )
+        ];
+
+
+      heart.style.left =
+        Math.random() * 100
+        + "vw";
+
+
+      heart.style.fontSize =
+        17
+        + Math.random() * 30
+        + "px";
+
+
+      const duration =
+        7
+        + Math.random() * 8;
+
+
+      heart.style.animationDuration =
+        duration
+        + "s";
+
+
+      heartContainer.appendChild(
+        heart
+      );
+
+
+      setTimeout(
+        function () {
+
+          heart.remove();
+
+        },
+        duration * 1000
+      );
+
+    }
+
+
+    setInterval(
+      createHeart,
+      700
+    );
+
+
+    function burstHearts(
+      count
+    ) {
+
+      for (
+        let i = 0;
+        i < count;
+        i++
+      ) {
+
+        setTimeout(
+          createHeart,
+          i * 60
+        );
+
+      }
+
+    }
+
+
+
+    /* ----------------------------------
+       SIMPLE 3D MOUSE EFFECT
+    ----------------------------------- */
+
+    document.addEventListener(
+      "mousemove",
+      function (e) {
+
+        if (
+          window.innerWidth
+          < 850
+        ) {
+
+          return;
+
+        }
+
+
+        const x =
+          (
+            e.clientX
+            / window.innerWidth
+            - .5
+          )
+          * 10;
+
+
+        const y =
+          (
+            e.clientY
+            / window.innerHeight
+            - .5
+          )
+          * 10;
+
+
+        const cards =
+          document.querySelectorAll(
+            ".photo-card"
+          );
+
+
+        cards.forEach(
+          function (
+            card,
+            index
+          ) {
+
+            const direction =
+              index === 0
+              ? 1
+              : -1;
+
+
+            card.style.marginLeft =
+              (
+                x
+                * direction
+                * .9
+              )
+              + "px";
+
+
+            card.style.marginTop =
+              (
+                y
+                * direction
+                * .6
+              )
+              + "px";
+
+          }
+        );
+
+      }
+    );
+
+  </script>
+
 </body>
 </html>
